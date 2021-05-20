@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="list_cat2_tree">
+            <field name="name">cat2.tree</field>
+            <field name="model">practicauno_cat2</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="relCat1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="list_cat2_form">
+            <field name="name">cat2.form</field>
+            <field name="model">practicauno_cat2</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1><field name="name"/></h1>
+                        <field name="relCat1"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="cat2_action_window">
+            <field name="name">Categoria 2</field>
+            <field name="res_model">practicauno_cat2</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Categoria 2" id="cat2_menu" parent="categorias_menu" action="cat2_action_window"/>
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="practica_uno.list">
+      <field name="name">practicaUno list</field>
+      <field name="model">practica_uno.practica_uno</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="practica_uno.action_window">
+      <field name="name">practicaUno window</field>
+      <field name="res_model">practica_uno.practica_uno</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="practica_uno.action_server">
+      <field name="name">practicaUno server</field>
+      <field name="model_id" ref="model_practica_uno_practica_uno"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="practicaUno" id="practica_uno.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="practica_uno.menu_1" parent="practica_uno.menu_root"/>
+    <menuitem name="Menu 2" id="practica_uno.menu_2" parent="practica_uno.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="practica_uno.menu_1_list" parent="practica_uno.menu_1"
+              action="practica_uno.action_window"/>
+    <menuitem name="Server to list" id="practica_uno" parent="practica_uno.menu_2"
+              action="practica_uno.action_server"/>
+-->
+  </data>
+</odoo>
